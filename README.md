@@ -1,56 +1,57 @@
 # raylib C/C++ Template
 
-This is a simple and ready-to-use raylib template for Windows. It is designed for students, beginners, and anyone who wants to start a raylib project quickly.
+This is a simple Windows-ready raylib template for beginners and students. The goal is to get you started quickly with a working C/C++ setup.
 
-## What is included
-- A basic raylib example in main.c
-- Raylib headers and libraries in raylib-6.0/
-- Raylib documentation in raylib-documentaion/
+## Windows setup
 
-## How to use this project
+### 1. Install the compiler first
+Download and install MSYS2 from:
 
-### 1. Clone the repository
-Open your terminal and run:
+https://github.com/msys2/msys2-installer/releases/download/2026-06-11/msys2-x86_64-20260611.exe
+
+After installing MSYS2, open the MSYS2 terminal and install GCC:
 
 ```bash
-git clone https://github.com/MSKReddy7/raylib-c-cpp-template.git
-cd raylib-c-cpp-template
+pacman -S mingw-w64-ucrt-x86_64-gcc
 ```
 
-### 2. Setup raylib in your compiler
-After cloning, go to the folder named raylib-6.0 and copy the files into your compiler paths.
+### 2. Add the compiler to your PATH
+After installation, add the compiler bin folder to your system PATH.
 
-- Copy the contents of raylib-6.0/include into your compiler's include folder
-- Copy the contents of raylib-6.0/lib into your compiler's lib folder
+Typical locations are:
 
-Example locations:
-- For MinGW: copy to your MinGW include and lib folders
-- For MSVC: add the include and lib folders in your compiler settings
+- `C:\msys64\ucrt64\bin`
+- or `C:\msys64\mingw64\bin`
 
-If you are using a different compiler, just make sure your compiler can find:
-- the raylib header files
-- the raylib library files
+If you are not sure which one applies, use the folder that contains `g++.exe` and `gcc.exe`.
 
-### 3. Rename your source file
-You can keep the file as main.c, or rename it to whatever you want.
+### 3. Copy or move the raylib files
+Go to your project folder and find the raylib files in the `raylib-6.0` folder.
 
-- Use .c for C projects
-- Use .cpp for C++ projects
+Copy or move the contents of:
 
-### 4. Build and run the project
-If you are using Visual Studio Code, open this folder and press:
+- `raylib-6.0/include` to your compiler include folder
+- `raylib-6.0/lib` to your compiler lib folder
 
-```text
-Ctrl + Shift + B
-```
+For example, you can place them in:
 
-This workspace already has a build task set up, so the project should compile and run successfully.
+- `C:\msys64\mingw64\include`
+- `C:\msys64\mingw64\lib`
 
-### 5. Use the raylib documentation
-You can learn more from the documentation folder named raylib-documentaion. It contains useful raylib references and examples.
+If you installed the UCRT toolchain, use the `ucrt64` folders instead.
+
+### 4. Open the project in VS Code
+Open the project folder in Visual Studio Code.
+
+You can then build and run the project from the built-in terminal or by using the provided build task.
+
+## What is included
+- A basic raylib example in `main.cpp`
+- Raylib headers and libraries in `raylib-6.0/`
+- Raylib documentation in `raylib-documentaion/`
 
 ## Notes
-- Keep the raylib-6.0 folder with your project so the setup stays organized.
-- If you get errors, check whether your compiler can see both the include and lib folders correctly.
+- Keep the `raylib-6.0` folder with your project so the setup stays organized.
+- If you get errors, make sure your compiler can find both the include and lib folders.
 
 Enjoy coding with raylib!
