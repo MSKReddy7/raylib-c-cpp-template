@@ -10,7 +10,7 @@
                 "if /I \"${fileExtname}\"==\".c\" (gcc \"${file}\" -o \"${fileBasenameNoExtension}.exe\" -lraylib -lopengl32 -lgdi32 -lwinmm -lshell32 -mwindows -static) else (g++ \"${file}\" -o \"${fileBasenameNoExtension}.exe\" -lraylib -lopengl32 -lgdi32 -lwinmm -lshell32 -mwindows -static) && \"${fileBasenameNoExtension}.exe\""
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "group": {
                 "kind": "build",
@@ -29,7 +29,7 @@
                 "\"${fileBasenameNoExtension}.exe\""
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": []
         }
