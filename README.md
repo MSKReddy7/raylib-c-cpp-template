@@ -18,12 +18,7 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 ### 2. Add the compiler to your PATH
 After installation, add the compiler bin folder to your system PATH.
 
-Typical locations are:
-
 - `C:\msys64\ucrt64\bin`
-- or `C:\msys64\mingw64\bin`
-
-If you are not sure which one applies, use the folder that contains `g++.exe` and `gcc.exe`.
 
 ### 3. Copy or move the raylib files
 Go to your project folder and find the raylib files in the `raylib-6.0` folder.
@@ -32,13 +27,14 @@ Copy or move the contents of:
 
 - `raylib-6.0/include` to your compiler include folder
 - `raylib-6.0/lib` to your compiler lib folder
+- `raylib-6.0/bin` to your compiler bin folder
 
 For example, you can place them in:
 
-- `C:\msys64\mingw64\include`
-- `C:\msys64\mingw64\lib`
+- `C:\msys64\ucrt64\include`
+- `C:\msys64\ucrt64\lib`
+- `C:\msys64\ucrt64\bin`
 
-If you installed the UCRT toolchain, use the `ucrt64` folders instead.
 
 ### 4. Open the project in VS Code
 Open the project folder in Visual Studio Code.
